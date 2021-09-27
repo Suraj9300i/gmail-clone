@@ -1,0 +1,28 @@
+.SidebarElement {
+  padding: 0.8rem 1rem;
+  display: grid;
+  grid-template-columns: 35px auto 20px;
+  align-items: center;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  cursor: pointer;
+}
+.SidebarElement:hover {
+  background-color: whitesmoke;
+}
+.active {
+  color: #d93025 !important;
+  background-color: #fce8e6;
+  font-weight: bold;
+}
+.SidebarElement__title {
+  font-size: 1.5rem;
+}
+.SidebarElement__value {
+  font-size: 1.2rem;
+  color: rgb(100, 94, 94);
+}
+.icon {
+  font-size: 2rem !important;
+  color: gray;
+}
