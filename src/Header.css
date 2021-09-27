@@ -1,0 +1,37 @@
+.Header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 250px auto 200px;
+  align-items: center;
+  border-bottom: 1px solid whitesmoke;
+}
+.Header__left {
+  width: 15%;
+  display: flex;
+  align-items: center;
+}
+.Header__middle {
+  width: 70%;
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+.Header__middle__input {
+  outline: none;
+  border: none;
+  background-color: whitesmoke;
+  flex-grow: 1;
+}
+.Icon {
+  font-size: 2.3rem !important;
+}
+.Header__right {
+  display: flex;
+  align-items: center;
+}
+.Header__right-avatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
