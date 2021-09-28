@@ -1,6 +1,6 @@
 .EmailIntro {
   display: grid;
-  grid-template-columns: 40px 40px 13rem 15rem auto 70px;
+  grid-template-columns: 40px 40px 14rem auto 70px;
   align-items: center;
   font-size: 1.5rem;
   border-bottom: 1px solid whitesmoke;
@@ -9,20 +9,27 @@
 .EmailIntro:hover {
   background-color: whitesmoke;
 }
-.EmailIntro__name,
-.EmailIntro__subject {
+.EmailIntro__name {
   font-weight: bold;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
-.EmailIntro__message {
+
+.EmailIntro__mail {
+  display: flex;
+  align-items: center;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
+.EmailIntro__mail-subject {
+  font-weight: bold;
+}
+
 .EmailIntro__time {
   font-size: 1.2rem;
+  margin-right: 0.5rem;
   display: flex;
   justify-self: end;
 }

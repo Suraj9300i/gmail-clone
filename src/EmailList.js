@@ -25,7 +25,7 @@ const EmailList = () => {
         ></EmailIntro>
         <EmailIntro
           name="Apple"
-          subject="Buu Apple 11 pro"
+          subject="Buy Apple 11 pro"
           message="dolore asperiores sapiente voluptates ducimus
         repellat magnam, iste expedita ipsa dolor quo."
           time="11:37PM"

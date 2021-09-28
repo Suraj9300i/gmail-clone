@@ -25,8 +25,12 @@ const EmailIntro = (props) => {
         {starred ? <AiFillStar /> : <AiOutlineStar />}
       </IconButton>
       <div className="EmailIntro__name">{props.name}</div>
-      <div className="EmailIntro__subject">{props.subject}</div>
-      <div className="EmailIntro__message">{props.message}</div>
+      <span className="EmailIntro__mail">
+        <div className="EmailIntro__mail-subject">{props.subject}</div>
+        <div className="EmailIntro__mail-message">
+          &nbsp;-&nbsp; {props.message}
+        </div>
+      </span>
       <div className="EmailIntro__time">{props.time}</div>
     </div>
   );
