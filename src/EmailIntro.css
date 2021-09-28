@@ -1,0 +1,25 @@
+.EmailIntro {
+  display: grid;
+  grid-template-columns: 40px 40px 13rem 15rem auto 70px;
+  align-items: center;
+  font-size: 1.5rem;
+  border-bottom: 1px solid whitesmoke;
+  cursor: pointer;
+}
+.EmailIntro__name,
+.EmailIntro__subject {
+  font-weight: bold;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.EmailIntro__message {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.EmailIntro__time {
+  font-size: 1.2rem;
+  display: flex;
+  justify-self: end;
+}

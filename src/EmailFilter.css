@@ -1,0 +1,30 @@
+.EmailFilter {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid whitesmoke;
+}
+.EmailFilter__type {
+  padding: 1.7rem;
+  width: 18rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  transition: all 0.3s;
+}
+.EmailFilter__type:hover {
+  background-color: whitesmoke;
+}
+.EmailFilter__type svg {
+  font-size: 2rem;
+}
+.EmailFilter__type p {
+  margin-left: 1.5rem;
+  font-size: 1.4rem;
+}
+.EmailFilter__type-active {
+  border-bottom: 3px solid #d93025;
+}
+.EmailFilter__type-active p,
+.EmailFilter__type-active svg {
+  color: #d93025;
+}

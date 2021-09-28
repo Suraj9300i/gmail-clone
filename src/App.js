@@ -1,4 +1,6 @@
 import "./App.css";
+import EmailList from "./EmailList";
+import EmailSetting from "./EmailSetting";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 
@@ -10,7 +12,10 @@ function App() {
         <div className="app__body-left">
           <Sidebar></Sidebar>
         </div>
-        <div className="app__body-middle"></div>
+        <div className="app__body-middle">
+          <EmailSetting></EmailSetting>
+          <EmailList></EmailList>
+        </div>
         <div className="app__body-right"></div>
       </div>
     </div>

@@ -1,0 +1,36 @@
+.EmailSetting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid whitesmoke;
+}
+.EmailSetting__Buttons {
+  display: flex;
+  align-items: center;
+}
+.EmailSetting__Buttons > * {
+  margin-right: 1.3rem;
+}
+.EmailSetting__count {
+  display: flex;
+  align-items: center;
+}
+.EmailSetting__count p {
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+}
+.EmailSetting__count p:hover {
+  background-color: whitesmoke;
+}
+.icon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.icon-dropdown {
+  padding: 0.5rem 0.3rem;
+  border-radius: 5px;
+}
+.icon-dropdown:hover {
+  background-color: whitesmoke;
+}
