@@ -16,7 +16,7 @@ const EmailSetting = () => {
             setSelect(!select);
           }}
         >
-          {select ? <ImCheckboxUnchecked /> : <ImCheckboxChecked />}
+          {select ? <ImCheckboxChecked /> : <ImCheckboxUnchecked />}
         </IconButton>
         <MdArrowDropDown className="icon icon-dropdown" />
         <IconButton>
