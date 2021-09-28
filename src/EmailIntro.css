@@ -6,6 +6,9 @@
   border-bottom: 1px solid whitesmoke;
   cursor: pointer;
 }
+.EmailIntro:hover {
+  background-color: whitesmoke;
+}
 .EmailIntro__name,
 .EmailIntro__subject {
   font-weight: bold;
