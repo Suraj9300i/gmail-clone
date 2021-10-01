@@ -1,5 +1,4 @@
-import { IconButton } from "@material-ui/core";
-import React from "react";
+import React, { useState } from "react";
 import "./Sidebar.css";
 import SidebarElement from "./SidebarElement";
 import { MdInbox, MdDrafts, MdSend } from "react-icons/md";
@@ -9,6 +8,7 @@ import { BsFillCameraVideoFill } from "react-icons/bs";
 import { IoTime } from "react-icons/io5";
 
 function Sidebar() {
+  let [active, setactive] = useState("Inbox");
   return (
     <div className="Sidebar">
       <div className="Sidebar__compose">
@@ -19,22 +19,64 @@ function Sidebar() {
         <p>Compose</p>
       </div>
       <div className="Sidebar__buttons">
-        <SidebarElement title={"Inbox"} value={30} active={true}>
-          <MdInbox className="icon active" />
+        <SidebarElement
+          customClickEvent={(e) => {
+            setactive("Inbox");
+          }}
+          title={"Inbox"}
+          value={30}
+          active={active === "Inbox"}
+        >
+          <MdInbox className="icon" />
         </SidebarElement>
-        <SidebarElement title={"Starred"} value={27}>
+        <SidebarElement
+          customClickEvent={(e) => {
+            setactive("Starred");
+          }}
+          title={"Starred"}
+          value={27}
+          active={active === "Starred"}
+        >
           <AiFillStar className="icon" />
         </SidebarElement>
-        <SidebarElement title={"Snoozed"} value={15}>
+        <SidebarElement
+          customClickEvent={(e) => {
+            setactive("Snoozed");
+          }}
+          title={"Snoozed"}
+          value={15}
+          active={active === "Snoozed"}
+        >
           <IoTime className="icon" />
         </SidebarElement>
-        <SidebarElement title={"Sent"} value={53}>
+        <SidebarElement
+          customClickEvent={(e) => {
+            setactive("Sent");
+          }}
+          title={"Sent"}
+          value={53}
+          active={active === "Sent"}
+        >
           <MdSend className="icon" />
         </SidebarElement>
-        <SidebarElement title={"Drafts"} value={24}>
+        <SidebarElement
+          customClickEvent={(e) => {
+            setactive("Drafts");
+          }}
+          title={"Drafts"}
+          value={24}
+          active={active === "Drafts"}
+        >
           <MdDrafts className="icon" />
         </SidebarElement>
-        <SidebarElement title={"Categories"} value={12}>
+        <SidebarElement
+          customClickEvent={(e) => {
+            setactive("Categories");
+          }}
+          title={"Categories"}
+          value={12}
+          active={active === "Categories"}
+        >
           <AiFillTag className="icon" />
         </SidebarElement>
       </div>

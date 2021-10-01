@@ -15,6 +15,9 @@
   background-color: #fce8e6;
   font-weight: bold;
 }
+.active svg {
+  color: #d93025 !important;
+}
 .active:hover {
   background-color: #fce8e6;
 }

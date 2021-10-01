@@ -1,0 +1,84 @@
+.Compose {
+  height: 450px;
+  width: 450px;
+  position: absolute;
+  bottom: 0;
+  right: 2rem;
+  margin-right: 1rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.collapse {
+  height: 40px;
+}
+.hide {
+  display: none;
+}
+.Compose__Header {
+  padding: 1rem 2rem;
+  background-color: #202124;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.Compose-icon {
+  font-size: 1.5rem;
+  padding: 0 0.5rem;
+  cursor: pointer;
+}
+.Compose__Main {
+  flex-grow: 1;
+}
+.Compose__Main input,
+textarea {
+  display: block;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid whitesmoke;
+  width: 430px;
+}
+.input__Message {
+  height: 250px;
+}
+.Compose__Footer {
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+}
+.button-Send {
+  padding: 1rem;
+  background-color: #1873e8;
+  border-radius: 5px;
+  width: 75px;
+  display: flex;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+.button-Send p {
+  padding: 0 1rem;
+  font-size: 1.5rem;
+}
+
+.button-Send svg {
+  font-size: 1.5rem;
+}
+
+.Compose-Attachment > * {
+  font-size: 2rem;
+  margin-right: 0.7rem;
+  cursor: pointer;
+  color: black;
+  padding: 0.3rem;
+}

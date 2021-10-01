@@ -3,6 +3,7 @@ import EmailList from "./EmailList";
 import EmailSetting from "./EmailSetting";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
+import Compose from "./Compose";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <div className="app__body-middle">
           <EmailSetting></EmailSetting>
           <EmailList></EmailList>
+          <Compose></Compose>
         </div>
         <div className="app__body-right"></div>
       </div>

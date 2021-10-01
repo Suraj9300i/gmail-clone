@@ -9,7 +9,6 @@
   display: flex;
   align-items: center;
   justify-content: start;
-  transition: all 0.3s;
 }
 .EmailFilter__type:hover {
   background-color: whitesmoke;
