@@ -46,6 +46,7 @@ textarea {
   border: none;
   border-bottom: 1px solid whitesmoke;
   width: 430px;
+  resize: none;
 }
 .input__Message {
   height: 250px;

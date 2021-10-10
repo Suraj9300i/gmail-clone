@@ -6,12 +6,20 @@ import { AiFillStar, AiFillTag } from "react-icons/ai";
 import { FaRegKeyboard } from "react-icons/fa";
 import { BsFillCameraVideoFill } from "react-icons/bs";
 import { IoTime } from "react-icons/io5";
+import { openComposeCreater } from "./redux/action";
+import { useDispatch } from "react-redux";
 
 function Sidebar() {
+  const dispatch = useDispatch();
   let [active, setactive] = useState("Inbox");
   return (
     <div className="Sidebar">
-      <div className="Sidebar__compose">
+      <div
+        className="Sidebar__compose"
+        onClick={(e) => {
+          dispatch(openComposeCreater());
+        }}
+      >
         <img
           src="https://www.gstatic.com/images/icons/material/colored_icons/1x/create_32dp.png"
           alt="Gmail"

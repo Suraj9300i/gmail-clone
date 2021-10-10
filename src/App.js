@@ -4,8 +4,11 @@ import EmailSetting from "./EmailSetting";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import Compose from "./Compose";
+import { useSelector } from "react-redux";
 
 function App() {
+  const compose = useSelector((state) => state.compose);
+
   return (
     <div className="App">
       <Header></Header>
@@ -16,7 +19,7 @@ function App() {
         <div className="app__body-middle">
           <EmailSetting></EmailSetting>
           <EmailList></EmailList>
-          <Compose></Compose>
+          {compose ? <Compose></Compose> : ""}
         </div>
         <div className="app__body-right"></div>
       </div>

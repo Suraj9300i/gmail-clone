@@ -10,10 +10,12 @@ import {
   AiOutlineSmile,
   AiOutlineFileImage,
 } from "react-icons/ai";
+import { closeComposeCreater } from "./redux/action";
+import { useDispatch } from "react-redux";
 
 const Compose = () => {
+  const dispatch = useDispatch();
   let [collapse, setCollapse] = useState(false);
-  let [hide, sethide] = useState(false);
 
   let collapseHandler = (e) => {
     setCollapse(!collapse);
@@ -28,7 +30,7 @@ const Compose = () => {
           <BsArrowsAngleExpand className="Compose-icon" />
           <TiDelete
             onClick={(e) => {
-              sethide(!hide);
+              dispatch(closeComposeCreater());
             }}
             className="Compose-icon"
           />
