@@ -57,6 +57,8 @@ textarea {
   align-items: center;
 }
 .button-Send {
+  border: none;
+  outline: none;
   padding: 1rem;
   background-color: #1873e8;
   border-radius: 5px;

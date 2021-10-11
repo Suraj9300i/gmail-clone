@@ -12,13 +12,36 @@ import {
 } from "react-icons/ai";
 import { closeComposeCreater } from "./redux/action";
 import { useDispatch } from "react-redux";
+import firebase from "firebase/compat";
+import { firestore } from "./Firebase/Firebase";
 
 const Compose = () => {
   const dispatch = useDispatch();
   let [collapse, setCollapse] = useState(false);
 
+  let [recipients, setRecipients] = useState("");
+  let [subject, setSubject] = useState("");
+  let [message, setMessage] = useState("");
+
   let collapseHandler = (e) => {
     setCollapse(!collapse);
+  };
+
+  let closeCompose = () => {
+    dispatch(closeComposeCreater());
+  };
+
+  let formSubmit = (e) => {
+    e.preventDefault();
+
+    firestore.collection("emails").add({
+      recipients,
+      subject,
+      message,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+    });
+
+    closeCompose();
   };
 
   return (
@@ -30,30 +53,53 @@ const Compose = () => {
           <BsArrowsAngleExpand className="Compose-icon" />
           <TiDelete
             onClick={(e) => {
-              dispatch(closeComposeCreater());
+              closeCompose();
             }}
             className="Compose-icon"
           />
         </div>
       </div>
-      <div className="Compose__Main">
-        <input className="input__Recipients" placeholder="Recipients"></input>
-        <input className="input__Subject" placeholder="Subject"></input>
-        <textarea rows="20" className="input__Message"></textarea>
-      </div>
-      <div className="Compose__Footer">
-        <div className="button-Send">
-          <p>Send</p>
-          <AiFillCaretDown />
+      <form onSubmit={formSubmit}>
+        <div className="Compose__Main">
+          <input
+            className="input__Recipients"
+            placeholder="Recipients"
+            value={recipients}
+            onChange={(e) => {
+              setRecipients(e.target.value);
+            }}
+          ></input>
+          <input
+            className="input__Subject"
+            placeholder="Subject"
+            value={subject}
+            onChange={(e) => {
+              setSubject(e.target.value);
+            }}
+          ></input>
+          <textarea
+            rows="20"
+            className="input__Message"
+            value={message}
+            onChange={(e) => {
+              setMessage(e.target.value);
+            }}
+          ></textarea>
         </div>
-        <div className="Compose-Attachment">
-          <BsType />
-          <IoIosAttach />
-          <AiOutlineLink />
-          <AiOutlineSmile />
-          <AiOutlineFileImage />
+        <div className="Compose__Footer">
+          <button className="button-Send" type="submit">
+            <p>Send</p>
+            {/* <AiFillCaretDown /> */}
+          </button>
+          <div className="Compose-Attachment">
+            <BsType />
+            <IoIosAttach />
+            <AiOutlineLink />
+            <AiOutlineSmile />
+            <AiOutlineFileImage />
+          </div>
         </div>
-      </div>
+      </form>
     </div>
   );
 };
