@@ -1,6 +1,6 @@
 .EmailIntro {
   display: grid;
-  grid-template-columns: 40px 40px 14rem auto 70px;
+  grid-template-columns: 40px 40px 14rem auto 80px;
   align-items: center;
   font-size: 1.5rem;
   border-bottom: 1px solid whitesmoke;

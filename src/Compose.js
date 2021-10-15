@@ -33,6 +33,7 @@ const Compose = () => {
 
   let formSubmit = (e) => {
     e.preventDefault();
+    if (recipients === "" || subject === "" || message === "") return;
 
     firestore.collection("emails").add({
       recipients,

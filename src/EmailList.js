@@ -10,15 +10,16 @@ const EmailList = () => {
 
   useEffect(() => {
     async function fun() {
-      let querySnapshot = await firestore.collection("emails").get();
-      let allEmails = [];
-      for (let i = 0; i < querySnapshot.docs.length; i++) {
-        allEmails.push({
-          id: querySnapshot.docs[i].id,
-          ...querySnapshot.docs[i].data(),
+      firestore
+        .collection("emails")
+        .orderBy("timestamp", "desc")
+        .onSnapshot((snapshot) => {
+          setEmails(
+            snapshot.docs.map((doc) => {
+              return { id: doc.id, ...doc.data() };
+            })
+          );
         });
-      }
-      setEmails(allEmails);
     }
     fun();
   }, []);
@@ -34,7 +35,9 @@ const EmailList = () => {
               name={email.recipients}
               subject={email.subject}
               message={email.message}
-              time="2:30PM"
+              time={new Date(
+                email.timestamp?.seconds * 1000
+              ).toLocaleTimeString()}
             ></EmailIntro>
           );
         })}
