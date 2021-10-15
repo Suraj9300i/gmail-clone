@@ -27,7 +27,7 @@ const EmailSetting = () => {
           <BsThreeDotsVertical />
         </IconButton>
       </div>
-      <div className="EmailSetting__Buttons-EmailRead hide">
+      <div className="EmailSetting__Buttons-EmailRead">
         <IconButton>
           <IoArrowBackOutline className="icon" />
         </IconButton>

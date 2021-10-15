@@ -9,7 +9,7 @@ const EmailIntro = (props) => {
   const [starred, setStarred] = useState(false);
 
   return (
-    <div className="EmailIntro">
+    <div className="EmailIntro" onClick={props.onClick}>
       <IconButton
         onClick={(e) => {
           setSelect(!select);

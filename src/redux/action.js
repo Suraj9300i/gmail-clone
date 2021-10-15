@@ -9,3 +9,16 @@ export const closeComposeCreater = () => {
     type: "CLOSE",
   };
 };
+
+export const openReadMail = (mail) => {
+  return {
+    type: "OPENMAIL",
+    payload: mail,
+  };
+};
+
+export const closeReadMail = () => {
+  return {
+    type: "CLOSEMAIL",
+  };
+};

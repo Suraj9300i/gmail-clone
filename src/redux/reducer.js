@@ -8,3 +8,14 @@ export const composeReducer = (state = false, action) => {
       return state;
   }
 };
+
+export const readMailReducer = (state = {}, action) => {
+  switch (action.type) {
+    case "OPENMAIL":
+      return action.payload;
+    case "CLOSEMAIL":
+      return {};
+    default:
+      return state;
+  }
+};
